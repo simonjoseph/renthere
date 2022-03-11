@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
-import Card from "../components/card";
+import Card from "../components/Card";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LargeCard from "../components/LargeCard";
