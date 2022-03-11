@@ -1,82 +1,141 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Banner from "../components/Banner";
+import Card from "../components/card";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import LargeCard from "../components/LargeCard";
+import MediumCard from "../components/MediumCard";
+import Nav from "../components/Nav";
+import { cardData } from "../data/CardsData";
+import Image from "next/image";
 
-export default function Home() {
+export default function Home({ exploreData }) {
+  let poc;
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Aluga Aqui</title>
+        <link rel="icon" href="/img/logo.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+      {/* <Header /> */}
+      <Nav />
+      <Banner />
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+      <main className=" max-w-7xl mx-auto">
+        <section className="pt-6 pb-12">
+          <h2
+            className="text-4xl font-semibold pb-5 
+          text-center text-[#292929]"
           >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+            Explore as melhores cidades de Angola
+          </h2>
+          <p
+            className="text-2xl font-medium pb-5 
+          text-center text-[#292929]"
           >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+            Vê o que elas têm para oferecer e alugue o espaço perfeito para si
+          </p>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
+          <div className="flex space-x-3 overflow-scroll p-3 -ml-3 scrollbar-hide">
+            {cardData?.map((item, index) => (
+              <MediumCard
+                key={index}
+                img={item.image}
+                title={item.title}
+                link={item.link}
+              />
+            ))}
+          </div>
+        </section>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+        <section className="pt-12 pb-12">
+          <h2
+            className="text-4xl font-semibold pb-5 
+          text-center text-[#292929]"
           >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            Lugares aguardando por si
+          </h2>
+          <p
+            className="text-2xl font-medium pb-5 
+          text-center text-[#292929]"
+          >
+            Venha até nós e acomode-se da melhor maneira
+          </p>
+
+        <div className="flex space-x-3 overflow-scroll p-3 -ml-3 scrollbar-hide">
+          {exploreData?.map((item, index) => (
+            <Card key={index}
+              dados={item}>
+
+              {/* {item.Foto.map((num, index) => (
+                <div key={index}>
+                  <p>{num.pic}</p>
+                  <Image src={"/img/" + num.pic} width="100px" height="100px" />
+                </div>
+              ))} */}
+
+            </Card>
+          ))}
         </div>
+        </section>
+
+
+        <LargeCard
+          img="/img/Fortaleza_Kibala.jpg"
+          title="Encontre os melhores sitio pra passar as férias"
+          description="Venha descobrir o que Angola tem de melhor para oferecer"
+          buttonText="Buscar"
+        />
+
+        <section className="pt-12 pb-12">
+          <h2
+            className="text-4xl font-semibold pb-5 
+          text-center text-[#292929]"
+          >
+            Desfrute do seu turismo
+          </h2>
+          <p
+            className="text-2xl font-medium pb-5 
+          text-center text-[#292929]"
+          >
+            Hospeda-se nos melhores hoteis que temos para si e visite outros
+            mais...
+          </p>
+
+          <div className="flex space-x-3 overflow-scroll p-3 -ml-3 scrollbar-hide">
+            {cardData?.map((item, index) => (
+              <MediumCard
+                key={index}
+                img={item.image}
+                title={item.title}
+                link={item.link}
+              />
+            ))}
+          </div>
+        </section>
+
+        <LargeCard
+          img="/img/gothome.jpg"
+          title="Com o Aluga aqui o teu sonho se torna realidade"
+          description="Encontre o melhor lugar para morar com a tua familia"
+          buttonText="Buscar"
+        />
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+      <Footer />
     </div>
-  )
+  );
+}
+
+export async function getStaticProps() {
+  const exploreData = await fetch("http://localhost:3331/Imoveis").then((res) =>
+    res.json()
+  );
+
+  return {
+    props: {
+      exploreData,
+    },
+  };
 }

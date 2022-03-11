@@ -1,0 +1,372 @@
+{
+  "Imoveis": [{
+      "id": 1,
+      "titlo": "Apartamento T3",
+      "Provincia": "Luanda",
+      "Bairro": "Palanca",
+      "Rua": "G",
+      "Casa": "9",
+      "Telefone": 945598299,
+      "Modalidade": "Comprar",
+      "Valor": 500.000,
+      "Quarto": "3",
+      "Sala": "1",
+      "Banheiro": "1",
+      "Area": "1m2",
+      "defaul": "LundanorteDundo.jpg",
+      "Foto": [
+        {
+          "pic": "lundanorte.jpg"
+        },
+        {
+          "pic": "benguela.jpg"
+        },
+        {
+          "pic": "living.jpg"
+        },
+        {
+          "pic": "living-room.jpg"
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "titlo": "Casa de 1 quarto e sala",
+      "Provincia": "Luanda",
+      "Bairro": "Golf2",
+      "Rua": "5",
+      "Casa": "90",
+      "Telefone": 945598299,
+      "Modalidade": "Alugar",
+      "Valor": 20.000,
+      "Quarto": "1",
+      "Sala": "1",
+      "Banheiro": "1",
+      "Area": "1m2",
+      "defaul": "benguela.jpg",
+      "Foto": [
+        {
+          "pic": "benguela.jpg"
+        },
+        {
+          "pic": "lundanorte.jpg"
+        },
+        {
+          "pic": "living.jpg"
+        },
+        {
+          "pic": "living-room.jpg"
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "titlo": "Apartamento T2",
+      "Provincia": "Luanda",
+      "Bairro": "Kilamba",
+      "Rua": "2A",
+      "Casa": "89",
+      "Telefone": 945598299,
+      "Modalidade": "Alugar",
+      "Valor": 500.000,
+      "Quarto": "2",
+      "Sala": "1",
+      "Banheiro": "1",
+      "Area": "1m2",
+      "defaul": "living.jpg",
+      "Foto": [
+        {
+          "pic": "living.jpg"
+        },
+        {
+          "pic": "lundanorte.jpg"
+        },
+        {
+          "pic": "benguela.jpg"
+        },
+        {
+          "pic": "living-room.jpg"
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "titlo": "Vivenda",
+      "Provincia": "Luanda",
+      "Bairro": "Viana",
+      "Rua": "Gosa",
+      "Casa": "09",
+      "Telefone": 945598299,
+      "Modalidade": "Comprar",
+      "Valor": "1500000",
+      "Quarto": "7",
+      "Sala": "4",
+      "Banheiro": "3",
+      "Area": "1m2",
+      "defaul": "living-room.jpg",
+      "Foto": [
+        {
+          "pic": "living-room.jpg"
+        },
+        {
+          "pic": "lundanorte.jpg"
+        },
+        {
+          "pic": "benguela.jpg"
+        },
+        {
+          "pic": "living.jpg"
+        }
+      ]
+    }
+    ,
+
+    {
+      "id": 5,
+      "titlo": "Apartamento T2",
+      "Provincia": "Luanda",
+      "Bairro": "Talatona",
+      "Rua": "Gosa",
+      "Casa": "09",
+      "Telefone": 945598299,
+      "Modalidade": "Comprar",
+      "Valor": "15000",
+      "Quarto": "2",
+      "Sala": "1",
+      "Banheiro": "1",
+      "Area": "1m2",
+      "defaul": "LundanorteDundo.jpg",
+      "Foto": [
+        {
+          "pic": "living-room.jpg"
+        },
+        {
+          "pic": "lundanorte.jpg"
+        },
+        {
+          "pic": "benguela.jpg"
+        },
+        {
+          "pic": "living.jpg"
+        }
+      ]
+    }
+    ,
+
+    {
+      "id": 6,
+      "titlo": "Cazenga",
+      "Provincia": "Luanda",
+      "Bairro": "Viana",
+      "Rua": "Somague",
+      "Casa": "09",
+      "Telefone": 945598299,
+      "Modalidade": "Aluguer",
+      "Valor": "6000",
+      "Quarto": "1",
+      "Sala": "1",
+      "Banheiro": "1",
+      "Area": "1m2",
+      "defaul": "gothome.jpg",
+      "Foto": [
+        {
+          "pic": "living-room.jpg"
+        },
+        {
+          "pic": "lundanorte.jpg"
+        },
+        {
+          "pic": "benguela.jpg"
+        },
+        {
+          "pic": "living.jpg"
+        }
+      ]
+    }
+  ],
+
+  "hotel": [{
+    "id": 1,
+    "titlo": "Hotel AAA",
+    "Provincia": "Luanda",
+    "Bairro": "Viana",
+    "Rua": "Somague",
+    "Casa": "09",
+    "Telefone": 945598299,
+    "Modalidade": "Aluguer",
+    "Valor": "6000",
+    "Quarto": "1",
+    "Sala": "1",
+    "Banheiro": "1",
+    "Area": "1m2",
+    "defaul": "gothome.jpg",
+    "Foto": [
+      {
+        "pic": "living-room.jpg"
+      },
+      {
+        "pic": "lundanorte.jpg"
+      },
+      {
+        "pic": "benguela.jpg"
+      },
+      {
+        "pic": "living.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "titlo": "Cazenga",
+    "Provincia": "Luanda",
+    "Bairro": "Viana",
+    "Rua": "Somague",
+    "Casa": "09",
+    "Telefone": 945598299,
+    "Modalidade": "Aluguer",
+    "Valor": "6000",
+    "Quarto": "1",
+    "Sala": "1",
+    "Banheiro": "1",
+    "Area": "1m2",
+    "defaul": "living-room.jpg",
+    "Foto": [
+      {
+        "pic": "living-room.jpg"
+      },
+      {
+        "pic": "lundanorte.jpg"
+      },
+      {
+        "pic": "benguela.jpg"
+      },
+      {
+        "pic": "living.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "titlo": "Cazenga",
+    "Provincia": "Luanda",
+    "Bairro": "Viana",
+    "Rua": "Somague",
+    "Casa": "09",
+    "Telefone": 945598299,
+    "Modalidade": "Aluguer",
+    "Valor": "6000",
+    "Quarto": "1",
+    "Sala": "1",
+    "Banheiro": "1",
+    "Area": "1m2",
+    "defaul": "lundanorte.jpg",
+    "Foto": [
+      {
+        "pic": "living-room.jpg"
+      },
+      {
+        "pic": "lundanorte.jpg"
+      },
+      {
+        "pic": "benguela.jpg"
+      },
+      {
+        "pic": "living.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "titlo": "Cazenga",
+    "Provincia": "Luanda",
+    "Bairro": "Viana",
+    "Rua": "Somague",
+    "Casa": "09",
+    "Telefone": 945598299,
+    "Modalidade": "Aluguer",
+    "Valor": "6000",
+    "Quarto": "1",
+    "Sala": "1",
+    "Banheiro": "1",
+    "Area": "1m2",
+    "defaul": "benguela.jpg",
+    "Foto": [
+      {
+        "pic": "living-room.jpg"
+      },
+      {
+        "pic": "lundanorte.jpg"
+      },
+      {
+        "pic": "benguela.jpg"
+      },
+      {
+        "pic": "living.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "titlo": "Cazenga",
+    "Provincia": "Luanda",
+    "Bairro": "Viana",
+    "Rua": "Somague",
+    "Casa": "09",
+    "Telefone": 945598299,
+    "Modalidade": "Aluguer",
+    "Valor": "6000",
+    "Quarto": "1",
+    "Sala": "1",
+    "Banheiro": "1",
+    "Area": "1m2",
+    "defaul": "living.jpg",
+    "Foto": [
+      {
+        "pic": "living-room.jpg"
+      },
+      {
+        "pic": "lundanorte.jpg"
+      },
+      {
+        "pic": "benguela.jpg"
+      },
+      {
+        "pic": "living.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "titlo": "Cazenga",
+    "Provincia": "Luanda",
+    "Bairro": "Viana",
+    "Rua": "Somague",
+    "Casa": "09",
+    "Telefone": 945598299,
+    "Modalidade": "Aluguer",
+    "Valor": "6000",
+    "Quarto": "1",
+    "Sala": "1",
+    "Banheiro": "1",
+    "Area": "1m2",
+    "defaul": "gothome.jpg",
+    "Foto": [
+      {
+        "pic": "living-room.jpg"
+      },
+      {
+        "pic": "lundanorte.jpg"
+      },
+      {
+        "pic": "benguela.jpg"
+      },
+      {
+        "pic": "living.jpg"
+      }
+    ]
+  }
+  ]
+}
