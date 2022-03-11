@@ -2,12 +2,12 @@ import Head from "next/head";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import LargeCard from "../components/LargeCard";
 import MediumCard from "../components/MediumCard";
 import Nav from "../components/Nav";
 import { cardData } from "../data/CardsData";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Home({ exploreData }) {
   let poc;
