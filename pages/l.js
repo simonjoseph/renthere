@@ -1,281 +1,200 @@
+/* This example requires Tailwind CSS v2.0+ */
+import { Fragment, useState } from 'react'
+import { Dialog, Transition } from '@headlessui/react'
+import { XIcon } from '@heroicons/react/outline'
 
-import { useState } from 'react'
-import { StarIcon } from '@heroicons/react/solid'
-import { RadioGroup } from '@headlessui/react'
-
-const product = {
-  name: 'Basic Tee 6-Pack',
-  price: '$192',
-  href: '#',
-  images: [
-    {
-      src: 'img/living.jpg',
-      alt: 'Two each of gray, white, and black shirts laying flat.',
-    },
-    {
-      src: 'img/living.jpg',
-      alt: 'Model wearing plain black basic tee.',
-    },
-    {
-      src: 'img/living.jpg',
-      alt: 'Model wearing plain gray basic tee.',
-    },
-    {
-      src: 'img/living.jpg',
-      alt: 'Model wearing plain white basic tee.',
-    },
-  ],
-  colors: [
-    { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
-    { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
-    { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
-  ],
-  sizes: [
-    { name: 'XXS', inStock: false },
-    { name: 'XS', inStock: true },
-    { name: 'S', inStock: true },
-    { name: 'M', inStock: true },
-    { name: 'L', inStock: true },
-    { name: 'XL', inStock: true },
-    { name: '2XL', inStock: true },
-    { name: '3XL', inStock: true },
-  ],
-  description:
-    'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
-  highlights: [
-    'Hand cut and sewn locally',
-    'Dyed with our proprietary colors',
-    'Pre-washed & pre-shrunk',
-    'Ultra-soft 100% cotton',
-  ],
-  details:
-    'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
-}
-const reviews = { href: '#', average: 4, totalCount: 117 }
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+const products = [
+  {
+    id: 1,
+    name: 'Throwback Hip Bag',
+    href: '#',
+    color: 'Salmon',
+    price: '$90.00',
+    quantity: 1,
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
+    imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
+  },
+  {
+    id: 2,
+    name: 'Medium Stuff Satchel',
+    href: '#',
+    color: 'Blue',
+    price: '$32.00',
+    quantity: 1,
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
+    imageAlt:
+      'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
+  },
+  // More products...
+]
 
 export default function Example() {
-  const [selectedColor, setSelectedColor] = useState(product.colors[0])
-  const [selectedSize, setSelectedSize] = useState(product.sizes[2])
+  const [open, setOpen] = useState(false)
 
   return (
-    <div className="bg-white">
-      <div className="pt-6">
-        
+    <>
+    <Transition.Root show={open} as={Fragment}>
+      <Dialog as="div" className="fixed  inset-0 overflow-hidden" onClose={setOpen}>
+        <div className="absolute inset-0 overflow-hidden">
+          {/* <Transition.Child
+            as={Fragment}
+            enter="ease-in-out duration-500"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in-out duration-500"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <Dialog.Overlay className="absolute bg-gray-500 bg-opacity-75 transition-opacity" />
+          </Transition.Child> */}
 
-        {/* Image gallery */}
-        <div className="mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
-          <div className="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
-            <img
-              src={product.images[0].src}
-              alt={product.images[0].alt}
-              className="w-full h-full object-center object-cover"
-            />
-          </div>
-          <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-            <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-              <img
-                src={product.images[1].src}
-                alt={product.images[1].alt}
-                className="w-full h-full object-center object-cover"
-              />
-            </div>
-            <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-              <img
-                src={product.images[2].src}
-                alt={product.images[2].alt}
-                className="w-full h-full object-center object-cover"
-              />
-            </div>
-          </div>
-          <div className="aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4">
-            <img
-              src={product.images[3].src}
-              alt={product.images[3].alt}
-              className="w-full h-full object-center object-cover"
-            />
-          </div>
-        </div>
+          <div className="pointer-events-none inset-y-0 right-0 flex max-w-md ">
+            <Transition.Child
+              as={Fragment}
+              enter="transform transition ease-in-out duration-500 sm:duration-700"
+              enterFrom="translate-full"
+              enterTo="translate-y-0"
+              leave="transform transition ease-in-out duration-500 sm:duration-700"
+              leaveFrom="translate-y-0"
+              leaveTo="translate-x-full"
+            >
+              <div className="pointer-events-auto w-screen h-screen max-w-md">
+                <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                  <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
+                    <div className="flex items-start justify-between">
+                      <Dialog.Title className="text-lg font-medium text-gray-900"> Shopping cart </Dialog.Title>
+                      <div className="ml-3 flex h-7 items-center">
+                        <button
+                          type="button"
+                          className="-m-2 p-2 text-gray-400 hover:text-gray-500"
+                          onClick={() => setOpen(false)}
+                        >
+                          <span className="sr-only">Close panel</span>
+                          <XIcon className="h-6 w-6" aria-hidden="true" />
+                        </button>
+                      </div>
+                    </div>
 
-        {/* Product info */}
-        <div className="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
-          <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-            <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">{product.name}</h1>
-          </div>
-
-          {/* Options */}
-          <div className="mt-4 lg:mt-0 lg:row-span-3">
-            <h2 className="sr-only">Product information</h2>
-            <p className="text-3xl text-gray-900">{product.price}</p>
-
-            {/* Reviews */}
-            <div className="mt-6">
-              <h3 className="sr-only">Reviews</h3>
-              <div className="flex items-center">
-                <div className="flex items-center">
-                  {[0, 1, 2, 3, 4].map((rating) => (
-                    <StarIcon
-                      key={rating}
-                      className={classNames(
-                        reviews.average > rating ? 'text-gray-900' : 'text-gray-200',
-                        'h-5 w-5 flex-shrink-0'
-                      )}
-                      aria-hidden="true"
-                    />
-                  ))}
-                </div>
-                <p className="sr-only">{reviews.average} out of 5 stars</p>
-                <a href={reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                  {reviews.totalCount} reviews
-                </a>
-              </div>
-            </div>
-
-            <form className="mt-10">
-              {/* Colors */}
-              <div>
-                <h3 className="text-sm text-gray-900 font-medium">Color</h3>
-
-                <RadioGroup value={selectedColor} onChange={setSelectedColor} className="mt-4">
-                  <RadioGroup.Label className="sr-only">Choose a color</RadioGroup.Label>
-                  <div className="flex items-center space-x-3">
-                    {product.colors.map((color) => (
-                      <RadioGroup.Option
-                        key={color.name}
-                        value={color}
-                        className={({ active, checked }) =>
-                          classNames(
-                            color.selectedClass,
-                            active && checked ? 'ring ring-offset-1' : '',
-                            !active && checked ? 'ring-2' : '',
-                            '-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none'
-                          )
-                        }
-                      >
-                        <RadioGroup.Label as="p" className="sr-only">
-                          {color.name}
-                        </RadioGroup.Label>
-                        <span
-                          aria-hidden="true"
-                          className={classNames(
-                            color.class,
-                            'h-8 w-8 border border-black border-opacity-10 rounded-full'
-                          )}
-                        />
-                      </RadioGroup.Option>
-                    ))}
-                  </div>
-                </RadioGroup>
-              </div>
-
-              {/* Sizes */}
-              <div className="mt-10">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-sm text-gray-900 font-medium">Size</h3>
-                  <a href="#" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                    Size guide
-                  </a>
-                </div>
-
-                <RadioGroup value={selectedSize} onChange={setSelectedSize} className="mt-4">
-                  <RadioGroup.Label className="sr-only">Choose a size</RadioGroup.Label>
-                  <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
-                    {product.sizes.map((size) => (
-                      <RadioGroup.Option
-                        key={size.name}
-                        value={size}
-                        disabled={!size.inStock}
-                        className={({ active }) =>
-                          classNames(
-                            size.inStock
-                              ? 'bg-white shadow-sm text-gray-900 cursor-pointer'
-                              : 'bg-gray-50 text-gray-200 cursor-not-allowed',
-                            active ? 'ring-2 ring-indigo-500' : '',
-                            'group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6'
-                          )
-                        }
-                      >
-                        {({ active, checked }) => (
-                          <>
-                            <RadioGroup.Label as="p">{size.name}</RadioGroup.Label>
-                            {size.inStock ? (
-                              <div
-                                className={classNames(
-                                  active ? 'border' : 'border-2',
-                                  checked ? 'border-indigo-500' : 'border-transparent',
-                                  'absolute -inset-px rounded-md pointer-events-none'
-                                )}
-                                aria-hidden="true"
-                              />
-                            ) : (
-                              <div
-                                aria-hidden="true"
-                                className="absolute -inset-px rounded-md border-2 border-gray-200 pointer-events-none"
-                              >
-                                <svg
-                                  className="absolute inset-0 w-full h-full text-gray-200 stroke-2"
-                                  viewBox="0 0 100 100"
-                                  preserveAspectRatio="none"
-                                  stroke="currentColor"
-                                >
-                                  <line x1={0} y1={100} x2={100} y2={0} vectorEffect="non-scaling-stroke" />
-                                </svg>
+                    <div className="mt-8">
+                      <div className="flow-root">
+                        <ul role="list" className="-my-6 divide-y divide-gray-200">
+                          {products.map((product) => (
+                            <li key={product.id} className="flex py-6">
+                              <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                <img
+                                  src={product.imageSrc}
+                                  alt={product.imageAlt}
+                                  className="h-full w-full object-cover object-center"
+                                />
                               </div>
-                            )}
-                          </>
-                        )}
-                      </RadioGroup.Option>
-                    ))}
+
+                              <div className="ml-4 flex flex-1 flex-col">
+                                <div>
+                                  <div className="flex justify-between text-base font-medium text-gray-900">
+                                    <h3>
+                                      <a href={product.href}> {product.name} </a>
+                                    </h3>
+                                    <p className="ml-4">{product.price}</p>
+                                  </div>
+                                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                                </div>
+                                <div className="flex flex-1 items-end justify-between text-sm">
+                                  <p className="text-gray-500">Qty {product.quantity}</p>
+
+                                  <div className="flex">
+                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">
+                                      Remove
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                </RadioGroup>
+
+                  <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
+                    <div className="flex justify-between text-base font-medium text-gray-900">
+                      <p>Subtotal</p>
+                      <p>$262.00</p>
+                    </div>
+                    <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                    <div className="mt-6">
+                      <a
+                        href="#"
+                        className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                      >
+                        Checkout
+                      </a>
+                    </div>
+                    <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+                      <p>
+                        or{' '}
+                        <button
+                          type="button"
+                          className="font-medium text-indigo-600 hover:text-indigo-500"
+                          onClick={() => setOpen(false)}
+                        >
+                          Continue Shopping<span aria-hidden="true"> &rarr;</span>
+                        </button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <button
-                type="submit"
-                className="mt-10 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                Add to bag
-              </button>
-            </form>
-          </div>
-
-          <div className="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-            {/* Description and details */}
-            <div>
-              <h3 className="sr-only">Description</h3>
-
-              <div className="space-y-6">
-                <p className="text-base text-gray-900">{product.description}</p>
-              </div>
-            </div>
-
-            <div className="mt-10">
-              <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
-
-              <div className="mt-4">
-                <ul role="list" className="pl-4 list-disc text-sm space-y-2">
-                  {product.highlights.map((highlight) => (
-                    <li key={highlight} className="text-gray-400">
-                      <span className="text-gray-600">{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-10">
-              <h2 className="text-sm font-medium text-gray-900">Details</h2>
-
-              <div className="mt-4 space-y-6">
-                <p className="text-sm text-gray-600">{product.details}</p>
-              </div>
-            </div>
+            </Transition.Child>
           </div>
         </div>
-      </div>
+      </Dialog>
+    </Transition.Root>
+    simao
+    <button onClick={() => setOpen(true)} >clica</button>
+    <main class="py-6 px-4 sm:p-6 md:py-10 md:px-8">
+  <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+    <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+      <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">Beach House in Collingwood</h1>
+      <p class="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">Entire house</p>
     </div>
+    <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+      <img src="/img/logo.png" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy"/>
+      <img src="/img/log.png" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy"/>
+      <img src="/img/signin.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy"/>
+    </div>
+    <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+      <dt class="sr-only">Reviews</dt>
+      <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+        <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-1 stroke-current dark:stroke-indigo-500">
+          <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>4.89 <span class="text-slate-400 font-normal">(128)</span></span>
+      </dd>
+      <dt class="sr-only">Location</dt>
+      <dd class="flex items-center">
+        <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-3 text-slate-300">
+          <circle cx="1" cy="1" r="1" />
+        </svg>
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
+          <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
+          <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+        </svg>
+        Collingwood, Ontario
+      </dd>
+    </dl>
+    <div class="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
+      <button type="button" class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">Check availability</button>
+    </div>
+    <p class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+      This sunny and spacious room is for those traveling light and looking for a comfy and cosy place to lay their head for a night or two. This beach house sits in a vibrant neighborhood littered with cafes, pubs, restaurants and supermarkets and is close to all the major attractions such as Edinburgh Castle and Arthur's Seat.
+    </p>
+  </div>
+</main>
+
+
+
+
+
+    </>
   )
 }

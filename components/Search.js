@@ -50,7 +50,7 @@ function Search() {
             className="focus:ring-indigo-500 focus:border-indigo-500 block 
             w-full pl-9 pr-12 sm:text-sm border-gray-300 rounded-md h-[45px] 
             text-[#292929] font-medium"
-            placeholder="Para vc onde pretende ir"
+            placeholder="Para onde pretende ir"
           />
           <div className="">
             <button className="  flex 

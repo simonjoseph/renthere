@@ -14,7 +14,7 @@ export default function Navbar({id, titlo, Provincia, Bairro, Rua, Casa ,
   Telefone, Modalidade, Valor, Quarto, Sala, Banheiro, Area,
   defaul, Foto}) {
   return (
-    <Popover className="relative bg-white border-b-2 border-gray-100">
+    <Popover className="relative bg-white border-b-2 border-gray-100 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-2 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">

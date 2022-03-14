@@ -3,7 +3,6 @@ import { FaBath, FaBed } from "react-icons/fa";
 import { formatPrice } from "../util/format";
 
 function Card({ dados }) {
-  console.log(dados.defaul);
   return (
     <div
       className="cursor-pointer hover:scale-105 
