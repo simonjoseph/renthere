@@ -74,7 +74,7 @@ const Links = [
   }
 ]
 
-function Bar(test) {
+function Bar({test}) {
 
   console.log(test);
 

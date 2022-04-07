@@ -1,6 +1,8 @@
 import React from 'react'
-import Bar from '../components/Bar'
+import Nav from '../components/Nav'
 import Card from '../components/Card'
+import { LocationMarkerIcon, PhoneIcon, MailIcon, CheckCircleIcon } from '@heroicons/react/outline'
+
 
 export default function UserProfile() {
   const item = {
@@ -35,7 +37,7 @@ export default function UserProfile() {
   }
   return (
     <>
-    <Bar/>
+    <Nav test={"test"}/>
       <div className='relative pb-2 h-full justify-center'>
         <div className="flex flex-col pb-5">
           <div className="relative flex flex-col mb-7">
@@ -51,13 +53,32 @@ export default function UserProfile() {
               <h1 className='font-bold text-3xl text-center mt-3'>
                 Gypsie Bambu
               </h1>
-              <p>palanca, Luanda</p>
+              <div className="grid gap-[1.5rem] grid-cols-3 mt-[1rem]">
 
-              <h1>Verificação</h1>
+              <div >
+                  <p className='mb-[.25rem] '>
+                  <LocationMarkerIcon className='w-[20px] my-[0] mx-[auto]'/>
+                  </p>
+                <p className='mb-[.25rem] text-center'>palanca, Luanda</p>
+              </div>
 
-              <div className="flex gap-2">
-                <p>número</p>
-                <p>email</p>
+              <div >
+                <p className='mb-[.25rem]'>
+                  <PhoneIcon className='w-[20px] my-[0] mx-[auto]' />
+                </p>
+                <p className='mb-[.25rem] text-center'>+244 939 495 934</p>
+              </div>
+              <div >
+                <p className='mb-[.25rem] '>
+                  <MailIcon className='w-[20px] my-[0] mx-[auto]'/>
+                </p>
+                <p className='mb-[.25rem] text-center'>test@test.com</p>
+              </div>
+              </div>
+
+              <div className='flex'>
+                <h1  className='text-[green]'>Verificação: </h1>
+                <CheckCircleIcon className='w-[20px] text-[green]'/>
               </div>
 
               <h1>Propriedades listadas</h1>
