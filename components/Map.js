@@ -1,7 +1,5 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {
-  Circle,
-  FeatureGroup,
   MapContainer,
   Marker,
   Popup,
@@ -9,13 +7,13 @@ import {
 } from "react-leaflet";
 
 
-import { Text, Badge, Card } from "@sanity/ui";
+// import { Text, Badge, Card } from "@sanity/ui";
 
 // import "leaflet/dist/leaflet.css";
 // import "leaflet-draw/dist/leaflet.draw.css";
 
-import "leaflet/dist/leaflet.css";
-import "leaflet-draw/dist/leaflet.draw.css"
+// import "leaflet/dist/leaflet.css";
+// import "leaflet-draw/dist/leaflet.draw.css"
 
 // const [map, setMap] = useState(null);
 // const center = [5912, -9348];

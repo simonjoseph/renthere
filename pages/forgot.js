@@ -5,8 +5,6 @@ import React from 'react'
 import {FiLock, FiLogIn, FiMail} from 'react-icons/fi'
 
 function forgot() {
-
-
   return (
     <div>
       <Head>
