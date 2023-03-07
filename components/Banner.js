@@ -14,11 +14,15 @@ function Banner() {
       />
 
       <div className="absolute top-1/3 w-full text-center">
-        <p className="text-white text-5xl  font-bold">Encontrar um espaço <br /> Agora está muito fácil!</p>
-        <div className="mt-4 bg-white md:bg-transparent h-[150px] md:h-0" >
-        {/* <Search  /> */}
-        <Pesquisa />
+        <p className="text-white text-3xl md:text-5xl  font-bold">
+          Encontrar um espaço <br /> Agora está muito mais fácil!
+        </p>
+        <div className="mt-4 bg-transparent h-0" >
+          <Pesquisa />
         </div>
+        {/* <div className="mt-4 bg-white md:bg-transparent h-[150px] md:h-0" >
+        <Pesquisa />
+        </div> */}
       </div>
     </div>
   )

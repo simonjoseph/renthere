@@ -21,9 +21,9 @@ export default function Navbar({id, titlo, Provincia, Bairro, Rua, Casa ,
             <a href="/">
               <span className="sr-only">Alugaqui</span>
               <img
-                className="h-8 w-auto sm:h-[70px]"
+                className="h-[60px] w-auto sm:h-[70px]"
                 src="/img/logo.png"
-                alt=""
+                alt="aluga aqui"
               />
             </a>
           </div>
@@ -31,27 +31,28 @@ export default function Navbar({id, titlo, Provincia, Bairro, Rua, Casa ,
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
             
 
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-            {formatPrice(Valor)}
-            </a>
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+          <a href="#" className=" text-xs md:text-base font-medium text-gray-500 hover:text-gray-900">
               {titlo}
             </a>
+            <a href="#" className=" text-xs md:text-base font-medium text-gray-500 hover:text-gray-900">
+            {formatPrice(Valor)}
+            </a>
+            
 
             
           </Popover.Group>
           <div className="flex items-center justify-end md:flex-1 lg:w-0">
             <a href="/Imoveis/3" className="whitespace-nowrap text-base font-medium 
             text-gray-500 px-4 py-2 hover:text-gray-900 border border-transparent rounded-md shadow-sm ">
-              <ArrowLeftIcon className="flex-shrink-0 h-6 w-6 text-yellow-700" />
+              <ArrowLeftIcon className="flex-shrink-0 h-6 w-6 text-[#00af9e]" />
             </a>
             <a
-              href="/Imoveis/2"
+              href="/Imoveis/12"
               className="ml-8 whitespace-nowrap inline-flex items-center 
               justify-center px-4 py-2 border border-transparent rounded-md 
               shadow-sm text-base font-medium text-white "
             >
-              <ArrowRightIcon className="flex-shrink-0 h-6 w-6 text-yellow-700"/>
+              <ArrowRightIcon className="flex-shrink-0 h-6 w-6 text-[#00af9e]"/>
             </a>
           </div>
         </div>

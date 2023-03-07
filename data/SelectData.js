@@ -1,4 +1,12 @@
 export const selectData = [
+  {
+    items: [
+      { name: 'Aluguer' , value: 'Aluguer'},
+      { name: 'Comprar' , value: 'Comprar'}
+    ],
+    placeholder: 'Modalidade',
+    queryName: 'Modalidade',
+  },
   // {
   //   items: [
   //     { name: 'Apartamento' , value: 'Apartamento'},
@@ -8,17 +16,9 @@ export const selectData = [
   //     { name: 'Loja' , value: 'Loja'},
   //     { name: 'Terreno' , value: 'Terreno'},
   //   ],
-  //   placeholder: 'Modalidade',
-  //   queryName: 'Modalidade',
+  //   placeholder: 'Imoveis',
+  //   queryName: 'imoveis',
   // },
-  {
-    items: [
-      { name: 'Venda' , value: 'Venda'},
-      { name: 'Aluguer' , value: 'Aluguer'}
-    ],
-    placeholder: 'Modalidade',
-    queryName: 'Modalidade',
-  }
 ];
 
 export const getSelectData = (selectData) => {
@@ -27,7 +27,11 @@ export const getSelectData = (selectData) => {
     {
       name: 'Modalidade',
       value: Modalidade
-    }
+    },
+    // {
+    //   name: 'Imoveis',
+    //   value: imoveis
+    // }imoveis
   ]
   return values;
 }

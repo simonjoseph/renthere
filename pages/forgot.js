@@ -31,14 +31,14 @@ function forgot() {
                 focus:ring-transparent' type="email" placeholder='E-mail' />
             </div>
             
-            <button className=' bg-[#c2a895] border-0 rounded-[10px]
-              border-gray-400 px-4 w-full mt-4 font-bold h-14 transition 
+            <button className=' bg-[#00af9e] border-0 rounded-[10px]
+              border-gray-400 text-white px-4 w-full mt-4 font-bold h-14 transition : ;
               hover:brightness-90 ' type='submit'>Recuperar</button>
             
           </form>
 
           <Link href="signup" >
-            <a href="" className='mx-auto mt-4 flex items-center text-[#c2a895] 
+            <a href="" className='mx-auto mt-4 flex items-center text-[#00af9e] 
               transition hover:brightness-90' >
               <FiLogIn className='mr-4' /> 
               Voltar ao login

@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       background: {
-        maincolor: ''
+        maincolor: '#00af9e'
       },
       animate: {
         'slide-in': 'slide-in 0.5s ease-out'

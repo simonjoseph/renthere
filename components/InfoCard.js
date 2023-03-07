@@ -53,7 +53,7 @@ function InfoCard({id, titlo, Provincia, Bairro, Rua, Casa ,
           </div>
 
           <button className=" 
-                bg-[#00af9e] text-white rounded-[8px] p-2 
+                bg-[#00af9e] background-maincolor text-white rounded-[8px] p-2 
                 cursor-pointer">Saber mais</button>
 
         </div>

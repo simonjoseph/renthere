@@ -16,6 +16,18 @@ export default function Space({id, titlo, Provincia, Bairro, Rua, Casa ,
 
     console.log(slice[0], slice[1], slice[2].pic, defaul)
 
+    // Beg
+  
+    // const handleClick = () => {
+//       return <Ligthbox
+//       defaul={defaul}
+//       Foto={Foto}
+// />
+// return console.log('ok');
+//     }
+
+    // End
+
   return (
     <div className="bg-white">
       <div className="pt-2">
@@ -56,13 +68,18 @@ export default function Space({id, titlo, Provincia, Bairro, Rua, Casa ,
         
         <div className="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-            <div className= "bg-white shadow-sm text-gray-900 cursor-pointer group relative border rounded-md py-3 px-4 flex items-center justify-center sm:flex-1 sm:py-6 w-20 ring-2 ring-indigo-500">
+            <div className= "bg-white shadow-sm text-gray-900 cursor-pointer group relative border rounded-md py-3 px-4 flex items-center justify-center sm:flex-1 sm:py-2 w-20 ring-2 ring-[#00af9e]">
               {/* <div as="p">Fotos</div> */}
               {/* <Button /> */}
+                <div>
                 <Ligthbox
                   defaul={defaul}
                   Foto={Foto}
             />
+            {/* <div className="bg-white w-[60px] h-[100%] absolute top-[0] ">
+              <p className=" text-lg text-center pt-[30px]">Foto</p>
+            </div> */}
+                </div>
               {/*  */}
               <div className= "border border-indigo-500 absolute -inset-px -md pointer-events-none" 
               aria-hidden="true" />
@@ -71,14 +88,16 @@ export default function Space({id, titlo, Provincia, Bairro, Rua, Casa ,
                   </div>
             </div>
           
-          <p className="text-3xl text-gray-900">{formatPrice(Valor)}</p>
-            <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">{titlo}</h1>
+          <p className="text-2xl text-gray-900">{formatPrice(Valor)}</p>
+            <h1 className="text-2xl sm:text-2xl md:text-2xl font-semibold pb-5 
+            text-[#292929]">{titlo}</h1>
+            {/* <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-2xl">{titlo}</h1> */}
           </div>
 
           <div className="mt-4 lg:mt-0 lg:row-span-3">
-            <form className="mt-10">
+            <div className="mt-10">
               <Form Telefone={Telefone} />
-            </form>
+            </div>
           </div>
 
           <div className="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
@@ -86,16 +105,22 @@ export default function Space({id, titlo, Provincia, Bairro, Rua, Casa ,
             <div>
 
               <div className="space-y-6">
-                <p className="text-base text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error 
-                  earum deleniti esse perspiciatis? Aut quam consequuntur nisi, 
-                  dolorem voluptatem excepturi adipisci amet animi eligendi necessitatibus 
-                  iusto vero sunt quis. Non, quaerat accusamus? Consequatur distinctio 
-                  voluptatem illum consectetur iste animi architecto! Voluptatibus s
-                  int explicabo, aspernatur earum nisi impedit perferendis rerum eveniet.
-                </p>
                 <Test Quarto={Quarto} Sala={Sala} Banheiro={Banheiro} Area={Area} />
+                <p className="text-base text-gray-600">
+                  Apartamento espaçoso com curadoria em Berlin Mitte com destaques 
+                  vintage. Espaçoso e central são palavras-chave para descrever a 
+                  minha casa. E mais, está repleto de objetos pessoais e obras de 
+                  arte que contam histórias de viagens e amizades. É um equilíbrio 
+                  maravilhoso de conveniência urbana e charme caseiro. O apartamento 
+                  tem uma localização central em Berlin Mitte - a 3 minutos a pé da 
+                  Alexanderplatz, Hackescher Markt e Torstrasse. É facilmente acessível 
+                  por transportes públicos
+                </p>
               </div>
+              
+              {/* <button onClick={handleClick} >
+                Fotos
+              </button> */}
             </div>
 
             {/* <div className="mt-10">

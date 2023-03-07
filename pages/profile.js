@@ -38,10 +38,10 @@ export default function profile() {
               objectFit="cover"
               className="rounded-[50%] "
             />
-            <label htmlFor='avatar' className=' absolute w-12 h-12 p-2 bg-yellow-700 
+            <label htmlFor='avatar' className=' absolute w-12 h-12 p-2 bg-[#00af9e] 
               rounded-full right-0 bottom-0 lg:right-[-10px] lg:bottom-[-10px] cursor-pointer' 
               >
-              <CameraIcon />
+              <CameraIcon className='text-white' />
             <input type="file" className=' hidden' id="avatar" onChange={handleAvatarChange} />
             </label>
           </div>
@@ -83,8 +83,8 @@ export default function profile() {
                 focus:ring-transparent ' type="password"
               placeholder='Senha' />
             </div>
-            <button className=' bg-[#c2a895] border-0 rounded-[10px]
-              border-gray-400 px-4 w-full mt-4 font-bold h-14 transition 
+            <button className=' bg-[#00af9e] border-0 rounded-[10px]
+              border-gray-400 px-4 w-full mt-4 text-white font-bold h-14 transition : ;
               hover:brightness-90 ' type='submit'>Entar</button>
           </div>
         </div>

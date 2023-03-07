@@ -9,19 +9,19 @@ function Search() {
   const search = () => {
     router.push({
       pathname: "/find",
-      query:{
+      query: {
         location: searchInput,
-      }
+      },
     });
   };
 
   return (
-    <div className="rounded-md ">
+    <div className=" ">
       <div
-        className="
-        md:shadow-sm w-11/12 md:w-[433px] motion-reduce:mx-auto"
+        className="py-2 
+          motion-reduce:mx-auto"
       >
-        <div className="mt-1 relative rounded-md shadow-sm flex ">
+        <div className="mt-1 relative rounded-md shadow-sm">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center 
           pointer-events-none">
             <span className="text-gray-500 sm:text-sm">
@@ -47,18 +47,18 @@ function Search() {
             type="text"
             name="search"
             id="search"
-            className="focus:ring-indigo-500 focus:border-indigo-500 block 
+            className="focus:ring-[#00af9e] focus:border-[#00af9e] block 
             w-full pl-9 pr-12 sm:text-sm border-gray-300 rounded-md h-[45px] 
             text-[#292929] font-medium"
             placeholder="Para onde pretende ir"
           />
           <div className="">
-            <button className="  flex 
-            items-center  md:mt-0 px-4 py-1 bg-yellow-700 rounded-md h-[45px]">
+            <button className="absolute inset-y-0 md:right-0 right-1 flex 
+            items-center md:mt-0">
               <SearchIcon
                 onClick={search}
                 className=" md:inline-flex h-8 
-              bg-yellow-700 text-white rounded-full p-2 
+                bg-[#00af9e] text-white rounded-full p-2 
               cursor-pointer md:mx-2 "
               />
             </button>
@@ -66,8 +66,22 @@ function Search() {
         </div>
       </div>
     </div>
+    // <div>
+    //   <label
+    //     htmlFor="Localization"
+    //     className="block text-sm font-medium text-gray-700"
+    //   >
+    //     Localização
+    //   </label>
+    //   <input
+    //     type="text"
+    //     name="Localization"
+    //     id="Localization"
+    //     autoComplete="given-name"
+    //     className="mt-1 focus:ring-[#00af9e] focus:border-[#00af9e] block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+    //   />
+    // </div>
   );
 }
-
 
 export default Search;

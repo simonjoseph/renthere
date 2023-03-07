@@ -1,6 +1,9 @@
 import CardImage from "../../components/CardImage";
+import Head from "next/head";
+
 import Navbar from "../../components/Navbar";
 import Space from "../../components/Space";
+import Footer from "../../components/Footer";
 // import InfoCard from "../../components/InfoCard";
 
 
@@ -9,6 +12,10 @@ function propertyDetails({searchResults}) {
 
   return (
     <div>
+      <Head>
+        <title>Aluga Aqui</title>
+        <link rel="icon" href="/img/alugaqui.ico" />
+      </Head>
         <div className="">
         {searchResults.map(({id, titlo, Provincia, Bairro, Rua, Casa,
               Telefone, Modalidade, Valor, Quarto, Sala, Banheiro, Area,
@@ -86,6 +93,7 @@ function propertyDetails({searchResults}) {
           </div>
 
         </section>
+        <Footer />
         </div>
 
     </div>

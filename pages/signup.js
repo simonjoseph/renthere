@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
-import {FiLock, FiLogIn, FiMail} from 'react-icons/fi'
+import {FiLock, FiLogIn, FiMail, FiUser} from 'react-icons/fi'
 
 function signup() {
 
@@ -21,17 +21,26 @@ function signup() {
         </div>
         <div className=' flex place-content-center flex-col w-screen max-w-[700px]
           bg-[#ffffff]'>
-          <Image src="/img/logo.png"
-            width="100px"
-            height="100px"
-            objectFit="contain"
-            objectPosition="center"
-          />
+          <a className='text-center' href="/">
+            <Image src="/img/logo.png"
+              width="100px"
+              height="100px"
+              objectFit="contain"
+              objectPosition="center"
+            />
+          </a>
 
           <form  className=' my-20 mx-auto w-[340px] text-center'>
             <h1 className=' mb-6'>Faça seu Cadastro</h1>
             <div className=' flex items-center bg-[#f5f4f0] border-2 rounded-[10px]
               border-gray-400  p-2 w-full' >
+              <FiUser className='mr-2 ' />
+              <input className='flex-1 bg-transparent border-0 
+                focus:ring-transparent' type="text" placeholder='Nome Completo' />
+            </div>
+
+            <div className=' flex items-center bg-[#f5f4f0] border-2 rounded-[10px]
+              border-gray-400  p-2 w-full mt-2' >
               <FiMail className='mr-2 ' />
               <input className='flex-1 bg-transparent border-0 
                 focus:ring-transparent' type="email" placeholder='E-mail' />
@@ -43,14 +52,21 @@ function signup() {
                 focus:ring-transparent ' type="password"
               placeholder='Password' />
             </div>
-            <button className=' bg-[#c2a895] border-0 rounded-[10px]
+            <div className='flex items-center bg-[#f5f4f0] border-2 rounded-[10px]
+            border-gray-400 p-2 w-full mt-2'>
+              <FiLock className='mr-2' />
+              <input className=' flex-1 bg-transparent border-0 
+                focus:ring-transparent ' type="password"
+              placeholder='Password' />
+            </div>
+            <button className=' bg-[#00af9e] border-0 rounded-[10px]
               border-gray-400 px-4 w-full mt-4 font-bold h-14 transition 
-              hover:brightness-90 ' type='submit'>Entar</button>
+              hover:brightness-90 text-white' type='submit'>Entar</button>
             
           </form>
 
           <Link href="signin" >
-            <a href="" className='mx-auto mt-4 flex items-center text-[#c2a895] 
+            <a href="" className='mx-auto mt-4 flex items-center text-[#00af9e] 
               transition hover:brightness-90' >
             <FiLogIn className='mr-4' /> 
               Fazer login

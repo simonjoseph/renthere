@@ -12,10 +12,10 @@ import Image from "next/image";
 export default function Home({ exploreData }) {
   let poc;
   return (
-    <div className="">
+    <div className=" overflow-hidden">
       <Head>
         <title>Aluga Aqui</title>
-        <link rel="icon" href="/img/logo.ico" />
+        <link rel="icon" href="/img/alugaqui.ico" />
       </Head>
 
       {/* <Header /> */}
@@ -25,19 +25,19 @@ export default function Home({ exploreData }) {
       <main className=" max-w-7xl mx-auto">
         <section className="pt-6 pb-12">
           <h2
-            className="text-4xl font-semibold pb-5 
+            className=" text-2xl sm:text-3xl md:text-4xl font-semibold pb-5 
           text-center text-[#292929]"
           >
             Explore as melhores cidades de Angola
           </h2>
           <p
-            className="text-2xl font-medium pb-5 
+            className=" ml-2 mr-2 md:ml-0 md:mr-0 text-lg md:text-2xl font-medium pb-5 
           text-center text-[#292929]"
           >
             Vê o que elas têm para oferecer e alugue o espaço perfeito para si
           </p>
 
-          <div className="flex space-x-3 overflow-scroll p-3 -ml-3 scrollbar-hide">
+          <div className="flex space-x-3 overflow-scroll p-3 md:-ml-3 scrollbar-hide">
             {cardData?.map((item, index) => (
               <MediumCard
                 key={index}
@@ -51,23 +51,22 @@ export default function Home({ exploreData }) {
 
         <section className="pt-12 pb-12">
           <h2
-            className="text-4xl font-semibold pb-5 
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold pb-5 
           text-center text-[#292929]"
           >
             Lugares aguardando por si
           </h2>
           <p
-            className="text-2xl font-medium pb-5 
+            className="ml-2 mr-2 md:ml-0 md:mr-0 text-lg md:text-2xl font-medium pb-5 
           text-center text-[#292929]"
           >
             Venha até nós e acomode-se da melhor maneira
           </p>
 
-        <div className="flex space-x-3 overflow-scroll p-3 -ml-3 scrollbar-hide">
+        <div className="flex space-x-3 overflow-scroll p-3 md:-ml-3 scrollbar-hide">
           {exploreData?.map((item, index) => (
             <Card key={index}
               dados={item}>
-
               {/* {item.Foto.map((num, index) => (
                 <div key={index}>
                   <p>{num.pic}</p>
@@ -90,20 +89,20 @@ export default function Home({ exploreData }) {
 
         <section className="pt-12 pb-12">
           <h2
-            className="text-4xl font-semibold pb-5 
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold pb-5 
           text-center text-[#292929]"
           >
             Desfrute do seu turismo
           </h2>
           <p
-            className="text-2xl font-medium pb-5 
+            className="ml-2 mr-2 md:ml-0 md:mr-0 text-lg md:text-2xl font-medium pb-5 
           text-center text-[#292929]"
           >
             Hospeda-se nos melhores hoteis que temos para si e visite outros
             mais...
           </p>
 
-          <div className="flex space-x-3 overflow-scroll p-3 -ml-3 scrollbar-hide">
+          <div className="flex space-x-3 overflow-scroll p-3 md:-ml-3 scrollbar-hide">
             {cardData?.map((item, index) => (
               <MediumCard
                 key={index}

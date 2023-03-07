@@ -4,7 +4,7 @@ function MediumCard({ link, img, title }) {
   return (
     <div
       className="cursor-pointer hover:scale-105 
-      transform transition duration-300 ease-out"
+      transform transition duration-300 ease-out s"
     >
       <div className="relative h-[343px] w-[237px]">
         <Image

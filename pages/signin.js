@@ -17,12 +17,14 @@ function signin() {
         <div className=' h-screen flex items-stretch '>
         <div className=' flex place-content-center flex-col w-screen max-w-[700px]
           bg-[#ffffff]'>
-          <Image src="/img/logo.png"
-            width="100px"
-            height="100px"
-            objectFit="contain"
-            objectPosition="center"
-          />
+          <a className='text-center' href="/">
+            <Image src="/img/logo.png"
+              width="100px"
+              height="100px"
+              objectFit="contain"
+              objectPosition="center"
+            />
+          </a>
 
           <form  className=' my-20 mx-auto w-[340px] text-center'>
             <h1 className=' mb-6'>Faça seu login</h1>
@@ -39,9 +41,9 @@ function signin() {
                 focus:ring-transparent ' type="password"
               placeholder='Senha' />
             </div>
-            <button className=' bg-[#c2a895] border-0 rounded-[10px]
+            <button className=' bg-[#00af9e] border-0 rounded-[10px]
               border-gray-400 px-4 w-full mt-4 font-bold h-14 transition 
-              hover:brightness-90 ' type='submit'>Entar</button>
+              hover:brightness-90 text-white' type='submit'>Entar</button>
             <Link href="forgot">
               <a className=' text-[#776e6e] block mt-4 transition 
                 hover:brightness-150'>
@@ -51,7 +53,7 @@ function signin() {
           </form>
 
           <Link href="signup" >
-            <a href="" className='mx-auto mt-4 flex items-center text-[#c2a895] 
+            <a href="" className='mx-auto mt-4 flex items-center text-[#00af9e]
               transition hover:brightness-90' >
             <FiLogIn className='mr-4' /> 
             criar conta

@@ -64,19 +64,19 @@ function Pesquisa() {
             type="text"
             name="search"
             id="search"
-            className="focus:ring-indigo-500 focus:border-indigo-500 block 
+            className="focus:ring-[#00af9e] focus:border-[#00af9e] block 
             w-full pl-9 pr-12 sm:text-sm border-gray-300 rounded-md h-[45px] 
             text-[#292929] font-medium"
             placeholder="Para onde pretende ir"
           />
           <div className="">
-            <div className="absolute md:inset-y-0 md:right-[130px] flex 
+            {/* <div className="absolute md:inset-y-0 md:right-[130px] flex 
             items-center bg-white md:bg-transparent mt-4 md:mt-0 rounded-md 
             p-1 md:p-0">
               <select
                 id="currenty"
                 name="currenty"
-                className="focus:ring-indigo-500 focus:border-indigo-500 
+                className="focus:ring-[#00af9e] focus:border-[#00af9e] 
                 h-full md:py-0 pl-2 pr-7 border-gray-300 md:border-transparent bg-transparent 
                 text-gray-500 sm:text-sm rounded-md font-medium"
               >
@@ -87,11 +87,12 @@ function Pesquisa() {
                 <option>Loja</option>
                 <option>Terreno</option>
               </select>
-            </div>
+            </div> */}
+            {/* and here */}
 
-            <div className="absolute md:inset-y-0 md:right-[50px] right-[5rem] flex 
+            {/* <div className="absolute md:inset-y-0 md:right-[50px] right-[5rem] flex 
             items-center bg-white md:bg-transparent mt-4 md:mt-0 rounded-md 
-            p-1 md:p-0">
+            p-1 md:p-0"> */}
               {/* <select
                 id="currenty"
                 name="currenty"
@@ -104,15 +105,15 @@ function Pesquisa() {
                 <option>Aluguer</option>
               </select> */}
 
-
-                {selects.map((select) =>(
+{/* here */}
+                {/* {selects.map((select) =>(
               <select
               key={select.queryName}
               placeholder={select.placeholder}
               onChange={(e) => searchSelect({[select.queryName]: e.target.value}) }
               id="currenty"
               name="currenty"
-              className="focus:ring-indigo-500 focus:border-indigo-500 
+              className="focus:ring-[#00af9e] focus:border-[#00af9e] 
               h-full md:py-0 pl-2 pr-7 border-gray-300 md:border-transparent 
               bg-transparent 
               text-gray-500 sm:text-sm rounded-md font-medium"
@@ -123,18 +124,25 @@ function Pesquisa() {
                 </select>
 ))}
               
+            </div> */}
 
-            </div>
-
-            <button className="absolute md:inset-y-0 md:right-0 right-1 flex 
+            <button className="absolute inset-y-0 md:right-0 right-1 mt-0">
+              <SearchIcon
+                onClick={search}
+                className=" h-8 
+                bg-[#00af9e] text-white rounded-full p-2 
+              cursor-pointer mx-2 "
+              />
+            </button>
+            {/* <button className="absolute md:inset-y-0 md:right-0 right-1 flex 
             items-center mt-7 md:mt-0">
               <SearchIcon
                 onClick={search}
                 className=" md:inline-flex h-8 
-              bg-yellow-700 text-white rounded-full p-2 
+                bg-[#00af9e] text-white rounded-full p-2 
               cursor-pointer md:mx-2 "
               />
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

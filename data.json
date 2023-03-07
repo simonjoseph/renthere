@@ -2,18 +2,19 @@
   "Imoveis": [{
       "id": 1,
       "titlo": "Apartamento T3",
+      "tipo": "Apartamento",
       "Provincia": "Luanda",
-      "Bairro": "Palanca",
-      "Rua": "G",
-      "Casa": "9",
-      "Telefone": 945598299,
+      "Bairro": "Talatona",
+      "Rua": "Rua dos cães",
+      "Casa": "19",
+      "Telefone": 941598299,
       "Modalidade": "Comprar",
-      "Valor": 500.000,
+      "Valor": 5000000,
       "Quarto": "3",
-      "Sala": "1",
-      "Banheiro": "1",
-      "Area": "1m2",
-      "defaul": "LundanorteDundo.jpg",
+      "Sala": "2",
+      "Banheiro": "2",
+      "Area": "100m2",
+      "defaul": "photo/WhatsApp-Image-2022-04-11-at-16.31.27-800x0-c-center.jpeg",
       "Foto": [
         {
           "pic": "lundanorte.jpg"
@@ -32,31 +33,192 @@
 
     {
       "id": 2,
+      "titlo": "Apartamento T2, Condominio Bengo",
+      "tipo": "Casa",
+      "Provincia": "Luanda",
+      "Bairro": "Vila Alice",
+      "Rua": "5",
+      "Casa": "90",
+      "Telefone": 941598298,
+      "Modalidade": "Aluguer",
+      "Valor": 5000000,
+      "Quarto": "2",
+      "Sala": "1",
+      "Banheiro": "1",
+      "Area": "300m2",
+      "defaul": "photo/edificio-bengo-apartamento-t2-arrendar-vila-alice-luanda-angola-01-big-89437-800x0-c-center.jpg",
+      "Foto": [
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-07-at-16.32.06-1-800x0-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-07-at-16.32.06-800x0-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-07-at-16.32.07-2-800x0-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-07-at-16.32.07-3-800x0-c-center.jpeg"
+        }
+      ]
+    },
+
+    {
+      "id": 42,
+      "titlo": "vivenda V5 Benfica",
+      "tipo": "Casa",
+      "Provincia": "Luanda",
+      "Bairro": "Benfica",
+      "Rua": "Rua do BFA",
+      "Casa": "90",
+      "Telefone": 941598299,
+      "Modalidade": "Aluguer",
+      "Valor": 2000000,
+      "Quarto": "5",
+      "Sala": "4",
+      "Banheiro": "7",
+      "Area": "650m2",
+      "defaul": "photo/WhatsApp-Image-2021-08-13-at-16.49.38-554x360-c-center.jpeg",
+      "Foto": [
+        {
+          "pic": "photo/WhatsApp-Image-2021-05-12-at-07.54.24-1-554x360-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-12-at-14.24.41-270x180-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-12-at-14.24.42-270x180-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-12-at-14.24.44-1-270x180-c-center.jpeg"
+        }
+      ]
+    },
+
+    {
+      "id": 32,
+      "titlo": "Moradia V3 mas Anexo Cruzeiro",
+      "tipo": "Casa",
+      "Provincia": "Luanda",
+      "Bairro": "Maculusso",
+      "Rua": "9",
+      "Casa": "145",
+      "Telefone": 927456902,
+      "Modalidade": "Aluguer",
+      "Valor": 10000000,
+      "Quarto": "3",
+      "Sala": "2",
+      "Banheiro": "3",
+      "Area": "400m2",
+      "defaul": "photo/WhatsApp-Image-2021-11-26-at-19.44.25-554x360-c-center.jpeg",
+      "Foto": [
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-12-at-14.24.45-2-800x0-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-12-at-14.24.45-3-800x0-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-12-at-14.24.45-270x180-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-12-at-14.24.46-2-800x0-c-center.jpeg"
+        }
+      ]
+    },
+
+    {
+      "id": 22,
       "titlo": "Casa de 1 quarto e sala",
+      "tipo": "Casa",
       "Provincia": "Luanda",
       "Bairro": "Golf2",
       "Rua": "5",
       "Casa": "90",
-      "Telefone": 945598299,
-      "Modalidade": "Alugar",
-      "Valor": 20.000,
-      "Quarto": "1",
-      "Sala": "1",
-      "Banheiro": "1",
-      "Area": "1m2",
-      "defaul": "benguela.jpg",
+      "Telefone": 928901309,
+      "Modalidade": "Aluguer",
+      "Valor": 5000000,
+      "Quarto": "4",
+      "Sala": "5",
+      "Banheiro": "5",
+      "Area": "400m2",
+      "defaul": "photo/IMG-20200909-WA0024-554x360-c-center.jpg",
       "Foto": [
         {
-          "pic": "benguela.jpg"
+          "pic": "photo/WhatsApp-Image-2022-04-12-at-14.24.47-270x180-c-center.jpeg"
         },
         {
-          "pic": "lundanorte.jpg"
+          "pic": "photo/WhatsApp-Image-2022-04-12-at-14.24.46-3-270x180-c-center.jpeg"
         },
         {
-          "pic": "living.jpg"
+          "pic": "photo/WhatsApp-Image-2022-04-12-at-14.24.46-4-270x180-c-center.jpeg"
         },
         {
-          "pic": "living-room.jpg"
+          "pic": "photo/WhatsApp-Image-2022-04-12-at-14.24.48-270x180-c-center.jpeg"
+        }
+      ]
+    },
+
+    {
+      "id": 12,
+      "titlo": "Moradia T3 Zango1",
+      "tipo": "Casa",
+      "Provincia": "Luanda",
+      "Bairro": "Zango1",
+      "Rua": "10",
+      "Casa": "78",
+      "Telefone": 945698255,
+      "Modalidade": "Aluguer",
+      "Valor": 20000,
+      "Quarto": "3",
+      "Sala": "1",
+      "Banheiro": "2",
+      "Area": "200m2",
+      "defaul": "photo/WhatsApp-Image-2022-04-11-at-16.31.13-800x0-c-center.jpeg",
+      "Foto": [
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-11-at-16.31.12-800x0-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-11-at-16.31.25-800x0-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-11-at-16.31.26-800x0-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-11-at-16.31.28-800x0-c-center.jpeg"
+        }
+      ]
+    },
+
+    {
+      "id": 84,
+      "titlo": "Moradia T3 Zango1",
+      "tipo": "Casa",
+      "Provincia": "Luanda",
+      "Bairro": "Zango1",
+      "Rua": "10",
+      "Casa": "78",
+      "Telefone": 945698255,
+      "Modalidade": "Aluguer",
+      "Valor": 20000,
+      "Quarto": "3",
+      "Sala": "1",
+      "Banheiro": "2",
+      "Area": "200m2",
+      "defaul": "photo/casa1.jpg",
+      "Foto": [
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-11-at-16.31.12-800x0-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-11-at-16.31.25-800x0-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-11-at-16.31.26-800x0-c-center.jpeg"
+        },
+        {
+          "pic": "photo/WhatsApp-Image-2022-04-11-at-16.31.28-800x0-c-center.jpeg"
         }
       ]
     },
@@ -64,12 +226,13 @@
     {
       "id": 3,
       "titlo": "Apartamento T2",
+      "tipo": "Vila",
       "Provincia": "Luanda",
       "Bairro": "Kilamba",
       "Rua": "2A",
       "Casa": "89",
       "Telefone": 945598299,
-      "Modalidade": "Alugar",
+      "Modalidade": "Aluguer",
       "Valor": 500.000,
       "Quarto": "2",
       "Sala": "1",
@@ -95,6 +258,7 @@
     {
       "id": 4,
       "titlo": "Vivenda",
+      "tipo": "Loja",
       "Provincia": "Luanda",
       "Bairro": "Viana",
       "Rua": "Gosa",
@@ -127,6 +291,7 @@
     {
       "id": 5,
       "titlo": "Apartamento T2",
+      "tipo": "Escritório",
       "Provincia": "Luanda",
       "Bairro": "Talatona",
       "Rua": "Gosa",
@@ -159,12 +324,106 @@
     {
       "id": 6,
       "titlo": "Cazenga",
+      "tipo": "Quarto",
       "Provincia": "Luanda",
       "Bairro": "Viana",
       "Rua": "Somague",
       "Casa": "09",
       "Telefone": 945598299,
       "Modalidade": "Aluguer",
+      "Valor": "6000",
+      "Quarto": "1",
+      "Sala": "1",
+      "Banheiro": "1",
+      "Area": "1m2",
+      "defaul": "gothome.jpg",
+      "Foto": [
+        {
+          "pic": "living-room.jpg"
+        },
+        {
+          "pic": "lundanorte.jpg"
+        },
+        {
+          "pic": "benguela.jpg"
+        },
+        {
+          "pic": "living.jpg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "titlo": "Lobito",
+      "tipo": "Apartamento",
+      "Provincia": "Benguela",
+      "Bairro": "Lobito",
+      "Rua": "Praia morena",
+      "Casa": "09",
+      "Telefone": 945598299,
+      "Modalidade": "Comprar",
+      "Valor": "6000",
+      "Quarto": "1",
+      "Sala": "1",
+      "Banheiro": "1",
+      "Area": "1m2",
+      "defaul": "gothome.jpg",
+      "Foto": [
+        {
+          "pic": "living-room.jpg"
+        },
+        {
+          "pic": "lundanorte.jpg"
+        },
+        {
+          "pic": "benguela.jpg"
+        },
+        {
+          "pic": "living.jpg"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "titlo": "Benguela",
+      "tipo": "Casa",
+      "Provincia": "Benguela",
+      "Bairro": "Ela",
+      "Rua": "G",
+      "Casa": "09",
+      "Telefone": 945598299,
+      "Modalidade": "Comprar",
+      "Valor": "6000",
+      "Quarto": "1",
+      "Sala": "1",
+      "Banheiro": "1",
+      "Area": "1m2",
+      "defaul": "gothome.jpg",
+      "Foto": [
+        {
+          "pic": "living-room.jpg"
+        },
+        {
+          "pic": "lundanorte.jpg"
+        },
+        {
+          "pic": "benguela.jpg"
+        },
+        {
+          "pic": "living.jpg"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "titlo": "Huambo",
+      "tipo": "Apartamento",
+      "Provincia": "Huambo",
+      "Bairro": "Porto amboin",
+      "Rua": "H",
+      "Casa": "09",
+      "Telefone": 945598299,
+      "Modalidade": "Comprar",
       "Valor": "6000",
       "Quarto": "1",
       "Sala": "1",

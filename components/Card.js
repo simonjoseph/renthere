@@ -11,7 +11,6 @@ function Card({ dados }) {
       <div className="relative h-[243px] w-[300px] p-2">
         <Image
           src={"/img/" + dados.defaul}
-          
           layout="fill"
           objectFit="cover"
           className=" rounded-[8px] rounded-b-none brightness-50"
@@ -25,16 +24,16 @@ function Card({ dados }) {
           <span> {dados.Modalidade} </span>
         </div>
         <p>{dados.Bairro}, {dados.Provincia}</p>
-        <div className="flex justify-between">
-          <div className="bg-gray-100 rounded-[6px] px-14">Ver detalhes</div>
-          <span className="flex px-1 bg-gray-100 rounded-lg">
-            <div className="flex mr-2 items-center">
-              <span> {dados.Quarto} </span>
-              <FaBed />
+        <div className="flex justify-between mt-2">
+          <div className="bg-[#00af9e] text-white rounded-[6px] px-14 py-[4px]">Ver detalhes</div>
+          <span className="flex px-1 rounded-lg">
+            <div className="flex mr-2 items-center justify-center">
+              <span className="mr-[2px]" > {dados.Quarto} </span>
+              <FaBed size={18} className="ml-[2px]" color="#00af9e"/>
             </div>
-            <div className="flex items-center">
-              <span> {dados.Banheiro} </span>
-              <FaBath />
+            <div className="flex items-center justify-center">
+              <span className="mr-[2px]"> {dados.Banheiro} </span>
+              <FaBath size={18} className="ml-[2px]" color="#00af9e"/>
             </div>
           </span>
         </div>

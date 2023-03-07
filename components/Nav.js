@@ -5,7 +5,6 @@ import {InboxInIcon} from '@heroicons/react/solid'
 import Image from 'next/dist/client/image'
 import Link from 'next/link'
 
-
 import {
   UserIcon,
   LogoutIcon,
@@ -23,7 +22,7 @@ const Links = [
   },
   {
     name: 'Publicitar seu espaço',
-    href: '#'
+    href: '/Publicity'
   }
 ]
 
@@ -64,12 +63,11 @@ function Nav({test}) {
 
   let profileImg = '/img/logo.png';
 
-  const [currentUser, setCurrentUser] = useState({
-    //null
-    email: 'test@test.com',
-    name: 'Gypsie Bambu',
-    photoURL: profileImg
-  });
+  const [currentUser, setCurrentUser] = useState(null);
+  //{//null
+    // email: 'test@test.com',
+    // name: 'Gypsie Bambu',
+    // photoURL: profileImg}
   return (
     <Popover className={classNames(
       test ? 'fixed bg-white z-[100] shadow' : 'relative bg-transparent z-50',
@@ -93,27 +91,29 @@ function Nav({test}) {
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-700">
+            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#00af9e]">
               <span className="sr-only">Abrir menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
-            {test? (
+            {/* {test? (
               <Search />
-            ) : (
+            ) : ( */}
               <div className=' space-x-10'>
                 {Links.map((item) => (
                 <Link key={item.name} href={item.href} >
                   <a
-                    className=" font-medium text-xl text-white hover:text-gray-900"
+                  className={classNames(
+                    test ? ' text-gray-500' : 'text-white ',
+                    " font-medium text-xl hover:text-[#00af9e]" )}
                   >
                     {item.name}
                   </a>
                 </Link>
               ))}
               </div>
-            )}
+            {/* )} */}
             {/* {Links.map((item) => ( */}
                {/* <Link key={item.name} href={item.href} > */}
                  {/* <a */}
@@ -131,14 +131,16 @@ function Nav({test}) {
           {/*  */}
           {!currentUser ? (<div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <Link href="/signup">
-              <a className="whitespace-nowrap text-xl font-medium text-white hover:text-gray-900">
+              <a className={classNames(
+                    test ? ' text-gray-500' : 'text-white ',
+                    " whitespace-nowrap font-medium text-xl hover:text-[#00af9e]" )}>
                 Inscrever-se
               </a>
             </Link>
 
             <Link href="/signin">
               <a
-                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-700 hover:bg-yellow-800"
+                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#00af9e] hover:bg-[#00af9e]"
               >
                 Entrar
               </a>
@@ -152,14 +154,14 @@ function Nav({test}) {
                   <Popover.Button
                   className={classNames(
                     test ? ' text-gray-500' : 'text-white ',
-                    'group bg-transparent rounded-md inline-flex items-center text-base font-medium  hover:text-gray-500 ' )}
+                    'group bg-transparent rounded-md inline-flex items-center text-base font-medium  hover:text-[#00af9e] ' )}
                   >
                     <span className=''>OI, {currentUser?.name?.toUpperCase()}</span>
                     {open ? <ChevronUpIcon
                       className=' ml-2 h-5 w-5 '
                       aria-hidden="true"
                     /> : <ChevronDownIcon
-                    className='ml-2 h-5 w-5 group-hover:text-gray-500'
+                    className='ml-2 h-5 w-5 group-hover:text-[#00af9e]'
                     aria-hidden="true"
                   />}
                   </Popover.Button>
@@ -182,7 +184,7 @@ function Nav({test}) {
                               href={item.href}
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                             >
-                              <item.icon className="flex-shrink-0 h-6 w-6 text-yellow-700" aria-hidden="true" />
+                              <item.icon className="flex-shrink-0 h-6 w-6 text-[#00af9e]" aria-hidden="true" />
                               <div className="ml-4">
                                 <p className="text-base font-medium text-gray-900">{item.name}</p>
                               </div>
@@ -223,7 +225,7 @@ function Nav({test}) {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-700">
+                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#00af9e]">
                     <span className="sr-only">Fechar menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -249,7 +251,7 @@ function Nav({test}) {
               <div>
               <Link href='/signin' >
               <a
-                className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-700 hover:bg-yellow-800"
+                className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#00af9e] hover:bg-[#00af9e]"
               >
                 Inscrever-se
               </a>
@@ -258,7 +260,7 @@ function Nav({test}) {
               <p className="mt-6 text-center text-base font-medium text-gray-500">
                 Já tem uma conta?{' '}
                 <Link href='/signup'>
-                <a  className="text-yellow-700 hover:text-yellow-600">
+                <a  className="text-[#00af9e] hover:text-[#00af9e]">
                   Entrar
                 </a>
                 </Link>
@@ -273,7 +275,7 @@ function Nav({test}) {
                   href={item.href}
                   className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                 >
-                  <item.icon className="flex-shrink-0 h-6 w-6 text-yellow-700" aria-hidden="true" />
+                  <item.icon className="flex-shrink-0 h-6 w-6 text-[#00af9e]" aria-hidden="true" />
                   <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
                 </a>
               ))}

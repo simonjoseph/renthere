@@ -46,7 +46,7 @@ export default function UserProfile() {
               className='w-full h-[370px] 2xl:h-[510px] shadow-lg object-cover' 
               alt="banner-pic" />
 
-              <img className='rounded-full w-20 h-20 -mt-10 shadow-xl object-cover'
+              <img className='rounded-full w-24 h-24 -mt-10 shadow-xl object-cover border-2 border-[#00af9e]'
                 src='img/living.jpg'
                 alt='user-pic'
               />
@@ -77,8 +77,8 @@ export default function UserProfile() {
               </div>
 
               <div className='flex'>
-                <h1  className='text-[green]'>Verificação: </h1>
-                <CheckCircleIcon className='w-[20px] text-[green]'/>
+                <h1  className='text-[#00af9e]'>Verificação: </h1>
+                <CheckCircleIcon className='w-[20px] text-[#00af9e]'/>
               </div>
 
               <h1>Propriedades listadas</h1>
